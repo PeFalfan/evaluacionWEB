@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Juegos</title>
+</head>
+<body>
+    <div class='titulo-listado'>
+        <h1> Listeilor de juegeitors </h1>
+    </div>
+    <table class="table table-success table-striped table-hover lista-juegos">
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Consola</th>
+            <th>Precio</th>
+            <th>Estado</th>
+        </tr>
+        {% for juego in juego %}
+        <tr>
+            <td>{{juego.codigo}}</td>
+            <td>{{juego.nombre}} </td>
+            <td>{{juego.consola}} </td>
+            <td>${{juego.valor}} </td>
+            <td>{{juego.estado}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

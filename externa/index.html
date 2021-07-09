@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Externa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link href="estilos.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <div class="login">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Usuario</label>
+                <input type="text" class="form-control" id="in_usuario" aria-describedby="emailHelp" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="in_pass" />
+            </div>
+            <button type="button" class="btn btn-primary" onClick="f_validar();">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="contenido-general">
+        <div>
+            <h1>Lista de juegos</h1>
+        </div>
+        <div class="contTabla">
+            <!-- a rellenar con la tabla de los juegos ya creados -->
+        </div>
+
+        <hr />
+        <hr />
+        <hr />
+
+        <div>
+            <h1>Agregar Juego</h1>
+        </div>
+
+        <div class="agregarJuego">
+            CODIGO <input type="text" id="txt_codigo" /><br />
+            NOMBRE <input type="text" id="txt_nombre" /><br />
+            CONSOLA <input type="text" id="txt_consola" /> <br />
+            VALOR <input type="number" id="txt_valor" /><br />
+            ESTADO <input type="text" id="txt_estado" /><br />
+
+            <button class="btn btn-primary" type="button" onClick="f_guardarJuego()">
+                Agregar Juego
+            </button>
+        </div>
+
+        <hr />
+        <hr />
+        <hr />
+
+        <div class="Eliminar Juego">
+            <h1>Eliminar Juego Según ID</h1>
+            ID <input type="text" id="txt_codigo_eliminar" /><br />
+
+            <button class="btn btn-danger" type="button" id="btn_eliminar" onClick="f_eliminar()">
+                Eliminar Juego
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
